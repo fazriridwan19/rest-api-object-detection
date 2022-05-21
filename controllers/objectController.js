@@ -25,11 +25,9 @@ module.exports = {
             
             res.status(200).json({
                 status: 'Success',
-                result: objects.length,
-                data: {
-                    object
-                }
+                data: object
             });
+
         } catch (error) {
             res.status(400).json({
                 status: 'Failed',
