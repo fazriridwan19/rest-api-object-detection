@@ -6,9 +6,8 @@ const objectRouter = require('./routes/objectRoute');
 const app = express();
 
 const connectWithRetry = () => {
-
-    // const mongoUrl = 'mongodb://localhost:27017/proj-kp'
-    const mongoUrl = 'mongodb+srv://fazri:123@fr-001.qxwjp.mongodb.net/proj-kp?retryWrites=true&w=majority'
+    
+    const mongoUrl = `mongodb+srv://${MONGO_USER}:${MONGO_PASSWORD}@fr-001.qxwjp.mongodb.net/${MONGO_DB}?retryWrites=true&w=majority`;
     mongoose
         .connect(mongoUrl, {
             useNewUrlParser: true,
