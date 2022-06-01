@@ -6,7 +6,7 @@ const objectRouter = require('./routes/objectRoute');
 const app = express();
 
 const connectWithRetry = () => {
-    const mongoUrl = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_METRIC_0},${MONGO_METRIC_1},${MONGO_METRIC_2}/${MONGO_DB}?replicaSet=atlas-10erm1-shard-0&ssl=true&authSource=admin`;
+    const mongoUrl = `mongodb+srv://fazri:123@fr-001.qxwjp.mongodb.net/?retryWrites=true&w=majority`;
     mongoose
         .connect(mongoUrl)
         .then(() => console.log("Connect to database"))
